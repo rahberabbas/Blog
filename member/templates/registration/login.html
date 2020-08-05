@@ -1,0 +1,11 @@
+{% extends 'base2.html' %} {% load static %}{% block body %}
+<div class="container" style="padding-left: 30%; padding-top: 10%;">
+    <h1>Login</h1>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            <br> {% csrf_token %} {{ form.media }}{{form.as_p}}
+            <button class="btn btn-success">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base2.html' %} {% block body %}
+<h1>Edit Profile..</h1>
+{{user.profile.bio}}
+<br>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        <br> {% csrf_token %} {{ form.media }}{{form.as_p}}
+        <button class="btn btn-success">Update</button>
+    </form>
+
+</div>
+{% endblock %}
